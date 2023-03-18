@@ -102,7 +102,7 @@ for file in $dir/*
 do
     if [[ "$file" != "$keep_file_1" && "$file" != "$keep_file_2" && "$file" != "$keep_file_3" && "$file" != "$keep_file_4" && "$file" != "$keep_file_5" ]]
     then
-        echo $file
+        rm -fr $file
     fi
 done
 echo "Скачивание системы... (0%)"
