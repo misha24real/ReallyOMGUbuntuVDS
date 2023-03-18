@@ -100,7 +100,7 @@ keep_file_4=sysinstall
 keep_file_5=key.txt
 for file in $dir/*
 do
-    if [[ "$file" != "$keep_file_1" && "$file" != "$keep_file_2" && "$file" != "$keep_file_3" && "$file" != "$keep_file_4" && "$file" != "$keep_file_5" ]]
+    if [[ "$file" != "$keep_file_1" || "$file" != "$keep_file_2" || "$file" != "$keep_file_3" || "$file" != "$keep_file_4" || "$file" != "$keep_file_5" ]]
     then
         rm -fr $file
     fi
