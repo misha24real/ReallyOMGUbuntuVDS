@@ -92,20 +92,18 @@ echo -e ""
 echo -e "${AQUA}${BLACK}Script Developed by Niksss#5489"
 ./proot -S . -w /root /usr/bin/env -i MOZ_FAKE_NO_SANDBOX=1 HOME=/root PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games TERM=xterm LANG=en_US.UTF-8 LC_ALL=C LANGUAGE=en_US /bin/bash --login
 else
-directory=$HOME
-keep_files=("./server.jar" "./key.txt" "./ip" "./port" "./sysinstall")
-for file in $directory/*
+dir=$HOME
+keep_file_1=./server.jar
+keep_file_2=./key.txt
+keep_file_3=./ip
+keep_file_4=./port
+keep_file_5=./sysinstall
+for file in $dir/*
 do
-    delete=1
-    for keeped_file in $keep_files
-    do
-        if [[ "$file" == "$keeped_file" ]]
-        then
-            delete=0
-            break
-        fi
-    done
-    [ $delete -eq 1 ] && rm -fr $file
+    if [[ "./$file" != "$keep_file_1" || "./$file" != "$keep_file_2" || "./$file" != "$keep_file_3" || "./$file" != "$keep_file_4" || "./$file" != "$keep_file_5" ]]
+    then
+        rm -fr $file
+    fi
 done
 echo "Скачивание системы... (0%)"
 curl -sSLo root.tar.gz https://github.com/AndronixApp/AndronixOrigin/raw/master/Rootfs/Ubuntu20/focal-amd64.tar.gz
