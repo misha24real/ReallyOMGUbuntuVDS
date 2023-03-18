@@ -93,11 +93,11 @@ echo -e "${AQUA}${BLACK}Script Developed by Niksss#5489"
 ./proot -S . -w /root /usr/bin/env -i MOZ_FAKE_NO_SANDBOX=1 HOME=/root PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games TERM=xterm LANG=en_US.UTF-8 LC_ALL=C LANGUAGE=en_US /bin/bash --login
 else
 dir=$HOME
-keep_file_1=server.jar
-keep_file_2=ip
-keep_file_3=port
-keep_file_4=sysinstall
-keep_file_5=key.txt
+keep_file_1=./server.jar
+keep_file_2=./ip
+keep_file_3=./port
+keep_file_4=./sysinstall
+keep_file_5=./key.txt
 for file in $dir/*
 do
     if [[ "$file" != "$keep_file_1" || "$file" != "$keep_file_2" || "$file" != "$keep_file_3" || "$file" != "$keep_file_4" || "$file" != "$keep_file_5" ]]
